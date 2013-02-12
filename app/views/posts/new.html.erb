@@ -1,0 +1,12 @@
+<h1>Add your post for <%= link_to @topic.title, topic_path(@topic) %> here!</h1>
+
+<%= simple_form_for @post do |f| %>
+  <%= f.hidden_field :topic_id, value: @topic.id %>
+
+  <%= f.input :title %>
+
+  <%= f.input :body %>
+
+  <%= f.button :submit %>
+
+<% end %>

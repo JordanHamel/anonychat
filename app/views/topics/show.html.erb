@@ -1,0 +1,5 @@
+<h1>Topic board for: <%= @topic.title %></h1>
+
+<%= link_to "Create a new Post", new_topic_post_path(@topic), class: "btn btn-medium" %>
+
+<%= render partial: "shared/post", collection: @topic.posts %>

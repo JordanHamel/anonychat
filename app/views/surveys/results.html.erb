@@ -1,0 +1,14 @@
+<h1>Survey Results!</h1>
+
+<h3>Average age of respondents:</h3>
+<%= Survey.average('age') %>
+
+<h3>Most popular cat meme:</h3>
+<%= image_tag("cat#{Survey.most_pop_cat.fav_cat_meme}.jpeg",
+                alt: "most popular cat") %>
+
+<h3>Hottest Valentine:</h3>
+<%= Survey.most_pop_celeb %>
+
+<h3>Random most embarrassing moment</h3>
+<%= Survey.random_moment.most_embarassing_moment %>

@@ -1,0 +1,12 @@
+<h1>Create a new topic!</h1>
+
+<%= simple_form_for @topic do |f| %>
+
+  <%= f.input :title, placeholder: "name your topic board" %>
+
+  <%= f.input :description,
+              placeholder: "optional: what is this topic board about?" %>
+
+  <%= f.button :submit %>
+
+<% end %>

@@ -1,0 +1,20 @@
+<h1>Welcome to our complex survey form thingy!</h1>
+
+<%= simple_form_for @survey do |f| %>
+  <%= f.input :favorite_celeb, collection: ["Reba McEntire", "Mandy Moore",
+    "The Hulk", "Ned Ruggeri", "Prez Obamz", "Florence Welch"],
+    prompt: "Optimal valentine?" %><br>
+
+  <%= f.input :age, collection: 14..85 %>
+
+  <%= f.input :fav_cat_meme, collection: [[image_tag("cat1.jpeg"), 1],
+              [image_tag("cat2.jpeg"), 2], [image_tag("cat3.jpeg"), 3]],
+              as: :radio_buttons %>
+
+  <%= f.input :most_embarassing_moment,
+              placeholder: "It's really 'embarrassing'" %>
+
+  <%= f.button :submit %>
+
+
+<% end %>

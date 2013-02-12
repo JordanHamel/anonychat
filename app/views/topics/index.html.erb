@@ -1,0 +1,15 @@
+<h1>These are all of the topics:</h1>
+
+<%= link_to "Create a new topic", new_topic_path,
+    class: "btn btn-medium btn-info" %><br><br>
+
+  <% @topics.each do |t| %>
+
+    <%= link_to t.title, topic_path(t) %><br>
+
+  <% end %>
+
+<br>
+
+<%= link_to "Take ze zurvey", new_survey_path,
+    class: "btn btn-large btn-danger" %>

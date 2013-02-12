@@ -5,11 +5,24 @@ class CommentsController < ApplicationController
     @post = Post.find(params[:comment][:post_id])
 
     if @comment.save
-      flash[:success] = "Your comment has been added."
-      redirect_to post_path(@post)
+      respond_to do |format|
+        format.html do
+          flash[:success] = "Your comment has been added."
+          redirect_to post_path(@post)
+        end
+        format.json { render json: { errors: [], comment: @comment } }
+      end
     else
-      flash[:error] = "Your post wasn't saved. Try again?"
-      redirect_to post_path(@post)
+      respond_to do |format|
+        format.html do
+          flash[:error] = "Your post wasn't saved. Try again?"
+          redirect_to post_path(@post)
+        end
+        format.json do render json: {
+          errors: ["Your post wasn't saved. Try again?"],
+          comment: @comment }
+        end
+      end
     end
   end
 end

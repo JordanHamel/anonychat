@@ -1,13 +1,30 @@
-<!-- <div class = "navbar">
-  <div class = "navbar-inner">
-    <div class="nav">
-      <%= link_to "Home", root_path %>
-    </div>
+<div class="navbar navbar-fixed-top">
+  <div class="container-fluid">
+    <ul class="header">
+      <li>
+        <%= link_to(image_tag('cat.jpeg', :alt => "AnonyChat"), root_path,
+          class: "brand") %>
+      </li>
+    </ul>
+
+      <div class="nav pull-center">
+          <h1>AnonyChat</h1>
+      </div>
+
+      <div class="navbar-form pull-right">
+        <ul class="header">
+          <li>
+            <%= link_to "Take ze zurvey", new_survey_path,
+                class: "btn btn-medium btn-danger" %>
+          </li>
+
+          <li>
+            <%= link_to "Create a new topic", new_topic_path,
+                class: "btn btn-medium btn-info" %>
+          </li>
+        </ul>
+      </div>
+    </ul>
   </div>
-</div> -->
-<ul class="header">
-  <li><%= link_to(image_tag('cat.jpeg', :alt => "AnonyChat"), root_path,
-    class: "brand") %></li>
-  <li><h1>AnonyChat</h1></li>
-</ul>
+</div>
 

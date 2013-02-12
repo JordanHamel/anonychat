@@ -1,6 +1,4 @@
 
-@import "bootstrap";
-
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
@@ -15,6 +13,8 @@
  *= require_tree .
  */
 
+ @import "bootstrap";
+
 .container {
   width: 960px;
   margin: auto;
@@ -23,13 +23,53 @@
 
 .header img {
   width: 72px;
+  border: 3px black solid;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
 }
 
 .header li {
   text-decoration: none;
   display: inline;
+  padding-top: 20px;
 }
 
-.header li h1 {
+.nav h1 {
   display: inline;
+  padding-top: 20px;
+  text-shadow: 2px 2px #ff0000;
+}
+
+body {
+  padding-top: 100px;
+}
+
+.navbar {
+  background: #ffffff;
+  background-image: image-url("zenbg-1.png"), image-url("zenbg-2.png");
+  background-repeat: repeat-x, repeat;
+}
+
+.topic {
+  height: 50px;
+  width: 100px;
+  border: 3px black solid;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  margin: 10px;
+  text-align: center;
+  background-color: #f0f0f0;
+  float: left;
+  box-shadow: 10px 10px 5px #888;
+}
+
+.topic a {
+  padding: 20px 10px 20px 10px;
+  line-height: 50px;
+  font-weight: bold;
+  text-decoration: none;
 }
